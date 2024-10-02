@@ -7,3 +7,6 @@ plotly
 scikit-learn
 seaborn
 xgboost
+flask
+flask-cors
+
