@@ -3,6 +3,7 @@ from flask import Flask, request, app, jsonify, url_for, render_template  # type
 import numpy as np
 import pandas as pd
 import joblib
+from flask_cors import CORS  # Import CORS module
 
 app = Flask(__name__)
 
@@ -32,6 +33,6 @@ def predict():
     return render_template("home.html", prediction_text="The House price prediction is {}".format(output))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    pass
 
     
