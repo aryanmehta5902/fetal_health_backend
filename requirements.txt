@@ -9,4 +9,5 @@ seaborn
 xgboost
 flask
 flask-cors
+gunicorn
 
