@@ -3,9 +3,11 @@ from flask import Flask, request, app, jsonify, url_for, render_template  # type
 import numpy as np
 import pandas as pd
 import joblib
-from flask_cors import CORS  # Import CORS module
+from flask_cors import CORS  # type: ignore # Import CORS module
 
 app = Flask(__name__)
+# Allow CORS for the specific frontend URL
+CORS(app, resources={r"/*": {"origins": "https://stirring-profiterole-6c3607.netlify.app"}})
 
 # Load the model
 regmodel = joblib.load('regmodel.joblib')
